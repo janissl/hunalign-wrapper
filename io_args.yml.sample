@@ -2,7 +2,7 @@ source_language: <ISO 639-1 language code>
 target_language: <ISO 639-1 language code>
 
 corpus_title: <title for the parallel corpus>
-batch_filepath: /path/to/hunspell_batch.txt
+batch_filepath: /path/to/hunalign_batch.txt
 
 hunalign_exe: /path/to/hunalign.exe
 hunspell_null_dic: /path/to/null.dic

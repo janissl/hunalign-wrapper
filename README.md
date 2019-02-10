@@ -1,8 +1,8 @@
 # hunalign-wrapper
 A set of scripts to build parallel corpora using hunalign<br><br>
 
-###Usage
-######File system structure:
+### Usage
+###### File system structure:
 <pre><code>
 ${corpus_title}
 |-- source
@@ -38,7 +38,7 @@ If no additional preprocessing has been made on source files, both paths must be
 * The _'work'_, _'aligned_idx'_ and _'result'_ directories are created automatically.
 * Aligned corpora are placed in the _'result'_ directory.<br>
 
-######An example of a configuration file (YAML):
+###### An example of a configuration file (YAML):
 (for running on Windows OS; replace ellipsis in brackets with actual paths; see also _io\_args.yml.sample_)
 <pre><code>
 source_language: en
@@ -60,7 +60,7 @@ alignment_threshold: 0
 </code></pre>
 
 
-####Running the shell script
+#### Running the shell script
 
 Execute the following command (on Windows):<br>
 `.\run_hunalign.bat io_args.yml`
@@ -69,6 +69,6 @@ __Note:__ The current set of scripts may be also run under UNIX/Linux OS.
 For this purpose, a Bash file similar to _run\_hunalign.bat_ must be executed.
 <hr>
 
-######References:
+###### References:
 * [hunalign](https://github.com/danielvarga/hunalign)
 * [hunalign (a version for MinGW-w64)](https://github.com/janissl/hunalign)

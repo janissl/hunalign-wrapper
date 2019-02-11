@@ -40,7 +40,7 @@ If no additional preprocessing has been made on source files, both paths must be
 * The _'work'_, _'aligned_idx'_ and _'result'_ directories are created automatically.
 * Aligned corpora are placed in the _'result'_ directory.<br>
 
-__Note:__ It is not necessary to keep all subdirectories (_work_, _aligned_idx_, _result_) under the same root but it is much easier to track the alignment process in this way.
+__Note:__ It is not necessary to keep all automatically created subdirectories (_work_, _aligned_idx_, _result_) under the same root but it is much easier to track the alignment process in this way.
 
 ##### An example of a configuration file (YAML):
 (for running on Windows OS; replace values in square brackets with actual paths; see also _io\_args.yml.sample_)

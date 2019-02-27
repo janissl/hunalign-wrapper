@@ -7,9 +7,8 @@ A set of scripts to build parallel corpora using hunalign
 <pre><code>
 ${corpus_title}
 |-- source
-|   |-- snt
-|       |-- ${title}_${source_lang}.snt
-|       |-- ${title}_${target_lang}.snt
+|   |-- ${title}_${source_lang}.snt
+|   |-- ${title}_${target_lang}.snt
 |-- work
 |   |-- ${source_lang}-${target_lang}
 |       |-- ${title}_${source_lang}.snt
@@ -35,11 +34,10 @@ ${corpus_title}
 * Parallel files must have identical titles (e.g. _article\_001\_en.snt_, _article\_001\_fr.snt_).
 * _hunalign_batch.txt_ will be created automatically during alignment process. Only specify the desired path (the parent directory must exist).
 * _null.dic_ is an empty file. It must exist before running the shell script.
-* There are two source data directories - _'original_source_data_directory'_ and _'source_data_directory'_ - specified in the YAML file.
+* There are two source data directories - _'original_source_data_directory'_ and _'preprocessed_source_data_directory'_ - specified in the YAML file.
 The 'original_source_data_directory' is used for files containing sentences in natural language (i.e. unmodified sentences).
-The _'source_data_directory'_ is used for additionaly preprocessed files originated from the 'original_source_data_directory' (e.g. stemmed files, additionally tokenized files etc.).
-In both directories, files must be stored in the _'snt'_ subfolder.
-The sentence alignment itself is done using the content from the _'source_data_directory'_.
+The _'preprocessed_source_data_directory'_ is used for additionaly preprocessed files originated from the _'original_source_data_directory'_ (e.g. stemmed files, additionally tokenized files etc.).
+The sentence alignment itself is done using the content from the _'preprocessed_source_data_directory'_.
 On the contrary, the building of parallel corpora is done using the content from _'original_source_data_directory'_.
 If no additional preprocessing has been made on source files, both paths must be equal.
 * The _'work'_, _'aligned_idx'_ and _'result'_ directories are created automatically.
@@ -60,7 +58,7 @@ hunalign_exe: [/path/to/hunalign/binary]
 hunspell_null_dic: [/path/to/hunspell]\null.dic
 
 original_source_data_directory: [...]\aligned_corpora\source
-source_data_directory: [...]\aligned_corpora\source
+preprocessed_source_data_directory: [...]\aligned_corpora\source
 work_directory: [...]\aligned_corpora\work
 alignment_index_directory: [...]\aligned_corpora\aligned_idx
 output_data_directory: [...]\aligned_corpora\result

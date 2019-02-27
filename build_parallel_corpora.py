@@ -40,9 +40,9 @@ def do_build(cfg):
             if not os.path.exists(trg_idx_path):
                 continue
 
-            orig_src_path = os.path.join(os.path.join(cfg['original_source_data_directory'], 'snt'),
+            orig_src_path = os.path.join(cfg['original_source_data_directory'],
                                          '{}_{}.snt'.format(pair_title, cfg['source_language']))
-            orig_trg_path = os.path.join(os.path.join(cfg['original_source_data_directory'], 'snt'),
+            orig_trg_path = os.path.join(cfg['original_source_data_directory'],
                                          '{}_{}.snt'.format(pair_title, cfg['target_language']))
 
             src_segments = get_segment_list(orig_src_path)

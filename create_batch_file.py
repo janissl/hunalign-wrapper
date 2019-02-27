@@ -20,7 +20,7 @@ def write_batch_file(cfg):
     with open(cfg['batch_filepath'], 'w', encoding='utf-8', newline='\n') as batch:
         writer = csv.writer(batch, dialect=csv.excel_tab)
 
-        for entry in os.scandir(os.path.join(cfg['source_data_directory'], 'snt')):
+        for entry in os.scandir(cfg['source_data_directory']):
             if entry.is_file() and entry.name.endswith(source_text_file_suffix):
                 pair_title = entry.name[:-len(source_text_file_suffix)]
                 target_text_filepath = os.path.join(os.path.dirname(entry.path), (pair_title + target_text_file_suffix))

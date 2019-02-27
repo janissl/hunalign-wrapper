@@ -21,10 +21,10 @@ ${corpus_title}
 |       |-- ${title}.${source_lang}.idx
 |       |-- ${title}.${target_lang}.idx
 |-- result
-        |-- ${corpus_title}.${source_lang}-${target_lang}.${source_lang}
-        |-- ${corpus_title}.${source_lang}-${target_lang}.${target_lang}
-        |-- ${corpus_title}.unique.${source_lang}-${target_lang}.${source_lang}
-        |-- ${corpus_title}.unique.${source_lang}-${target_lang}.${target_lang}
+    |-- ${corpus_title}.${source_lang}-${target_lang}.${source_lang}
+    |-- ${corpus_title}.${source_lang}-${target_lang}.${target_lang}
+    |-- ${corpus_title}.unique.${source_lang}-${target_lang}.${source_lang}
+    |-- ${corpus_title}.unique.${source_lang}-${target_lang}.${target_lang}
 </code></pre>
 
 * Additional Python dependency: PyYAML. Install it using the `python -m pip install PyYAML` command if necessary.

@@ -7,19 +7,24 @@ A set of scripts to build parallel corpora using hunalign
 <pre><code>
 ${corpus_title}
 |-- source
-    |-- snt
-            ${title}_${lang}.snt
+|   |-- snt
+|       |-- ${title}_${source_lang}.snt
+|       |-- ${title}_${target_lang}.snt
 |-- work
-    |-- ${source_lang}-${target_lang}
-            ${title}_${lang}.snt.aligned
+|   |-- ${source_lang}-${target_lang}
+|       |-- ${title}_${source_lang}.snt
+|       |-- ${title}_${target_lang}.snt
+|       |-- ${title}_${source_lang}.snt.aligned
+|       |-- ${title}_${target_lang}.snt.aligned
 |-- aligned_idx
-    |-- ${source_lang}-${target_lang}
-            ${title}.${lang}.idx
+|   |-- ${source_lang}-${target_lang}
+|       |-- ${title}.${source_lang}.idx
+|       |-- ${title}.${target_lang}.idx
 |-- result
-        ${corpus_title}.${source_lang}-${target_lang}.${source_lang}
-        ${corpus_title}.${source_lang}-${target_lang}.${target_lang}
-        ${corpus_title}.unique.${source_lang}-${target_lang}.${source_lang}
-        ${corpus_title}.unique.${source_lang}-${target_lang}.${target_lang}
+        |-- ${corpus_title}.${source_lang}-${target_lang}.${source_lang}
+        |-- ${corpus_title}.${source_lang}-${target_lang}.${target_lang}
+        |-- ${corpus_title}.unique.${source_lang}-${target_lang}.${source_lang}
+        |-- ${corpus_title}.unique.${source_lang}-${target_lang}.${target_lang}
 </code></pre>
 
 * Additional Python dependency: PyYAML. Install it using the `python -m pip install PyYAML` command if necessary.
@@ -72,7 +77,7 @@ alignment_threshold: 0
 <br><br>
 
 __Note:__ The current set of scripts may be also run under UNIX/Linux OS.
-For this purpose, a Bash file similar to _run\_hunalign.bat_ must be executed.
+For this purpose, a Bash script similar to _run\_hunalign.bat_ must be executed.
 <hr>
 
 ##### References:
